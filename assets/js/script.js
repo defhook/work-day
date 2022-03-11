@@ -38,11 +38,17 @@ var loadTasks = function () {
 } */
 
 for (let i = 0; i < timeArray.length; i++) {
-    console.log(timeArray[i])
-    console.log(localStorage.getItem(timeArray[i]))
+    //console.log("time stamp", timeArray[i])
+    //console.log("spliting time: ", timeArray[i].split(":")); 
+    //console.log(localStorage.getItem(timeArray[i]))
+    var id = "#" + timeArray[i].split(":")[0]; 
+    //console.log("id", id )
+    $(id).val(localStorage.getItem(timeArray[i]))
+    
 }
 
-
+//$("#9").val(localStorage.getItem("9:00 AM")); 
+//$("#10").val(localStorage.getItem("10:00 AM")); 
 //call function
 displayDate();
 
